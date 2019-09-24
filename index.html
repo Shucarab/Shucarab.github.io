@@ -60,6 +60,11 @@
       const xhr = new XMLHttpRequest();
       var data;
 
+      var fs = WScript.CreateObject("Scripting.FileSystemObject");
+var file = fs.OpenTextFile("./DBFILE_01.csv", 8, true, 0);
+file.Write("マルペケつくろ～だぜ！");
+file.Close();
+
       window.onload = function onLoad() {
         xhr.open('GET', './DBFILE_01.csv', false); // GETでローカルファイルを開く
         xhr.onload = () => {

@@ -67,9 +67,9 @@
 
     // （3）createObjectURLで（2）のテキストへのリンクを作成
     if (window.URL) {
-      disp.innerHTML = '<a href="' + window.URL.createObjectURL(blobBuilder.getBlob()) + '" target="_blank">file</a>';
+      disp.innerHTML = '<a href="'+  DBFILE_01.csv + '" target="_blank">file</a>';
     } else if (window.webkitURL) {
-      disp.innerHTML = '<a href="' + window.webkitURL.createObjectURL(blobBuilder.getBlob()) + '" target="_blank">ファイルダウンロード</a>';
+      disp.innerHTML = '<a href="' + DBFILE_01.csv + '" target="_blank">ファイルダウンロード</a>';
     }
 
   }, false);

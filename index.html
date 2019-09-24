@@ -56,5 +56,27 @@
     <a href="" class="button">Button</a>
     <a href="" class="button">Button</a>
 
+    <script type="text/javascript">
+      const xhr = new XMLHttpRequest();
+      var data;
+
+      window.onload = function onLoad() {
+        xhr.open('GET', './DBFILE_01.csv', false); // GETでローカルファイルを開く
+        xhr.onload = () => {
+            data = xhr.responseText;
+        };
+        xhr.onerror = () => {
+           console.log("error!");
+        };
+
+       xhr.send();
+
+        cts1 = document.getElementById("cts1");
+        cts1.innerText = data;
+      }
+  </script>
+  <div class="contents" id="cts1"></div>
+
+
   </body>
 </html>
